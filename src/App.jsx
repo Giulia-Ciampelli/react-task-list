@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 // #region componenti
 import Header from './components/Header'
+import Main from './components/Main'
 // #endregion componenti
 
 // #region stile
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <Header />
+      <Main />
     </>
   )
 }
