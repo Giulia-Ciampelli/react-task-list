@@ -1,5 +1,4 @@
 export default function Main() {
-    const content = 'welcome to my react app';
     const tasks = [
         {
             id: 1,
@@ -75,34 +74,34 @@ export default function Main() {
     const current_tasks = tasks.filter(task => task.state !== 'completed');
     const completed_tasks = tasks.filter(task => task.state === 'completed');
 
-    console.log(tasks);
-
     return (
         <>
-            <h3>
-                {content}
-            </h3>
-
             <section className="current_tasks">
                 <h2>
-                    Current tasks
+                    Current tasks ({current_tasks.length})
                 </h2>
 
                 <ul>
                     {current_tasks.map((task, index) => <li key={index}>
                         {task.title}
+                        {task.priority}
+                        {task.estimatedTime}
+                        {task.state}
                     </li>)}
                 </ul>
             </section>
 
             <section className="completed_tasks">
                 <h2>
-                    Completed tasks
+                    Completed tasks ({completed_tasks.length})
                 </h2>
 
                 <ul>
                     {completed_tasks.map(task => <li key={task.id}>
                         {task.title}
+                        {task.priority}
+                        {task.estimatedTime}
+                        {task.state}
                     </li>)}
                 </ul>
             </section>
