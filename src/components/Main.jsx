@@ -75,7 +75,7 @@ export default function Main() {
     const completed_tasks = tasks.filter(task => task.state === 'completed');
 
     return (
-        <>
+        <main>
             <section className="current_tasks">
                 <h2>
                     Current tasks ({current_tasks.length})
@@ -83,10 +83,18 @@ export default function Main() {
 
                 <ul>
                     {current_tasks.map((task, index) => <li key={index}>
-                        {task.title}
-                        {task.priority}
-                        {task.estimatedTime}
-                        {task.state}
+                        <span>
+                            {task.title}
+                        </span>
+                        <span className="state">
+                            {task.state}
+                        </span>
+                        <p>
+                            Priority: {task.priority}
+                        </p>
+                        <p>
+                            Est. time {task.estimatedTime}
+                        </p>
                     </li>)}
                 </ul>
             </section>
@@ -100,13 +108,21 @@ export default function Main() {
 
                 <ul>
                     {completed_tasks.map(task => <li key={task.id}>
-                        {task.title}
-                        {task.priority}
-                        {task.estimatedTime}
-                        {task.state}
+                        <span>
+                            {task.title}
+                        </span>
+                        <span className="state">
+                            {task.state}
+                        </span>
+                        <p>
+                            Priority: {task.priority}
+                        </p>
+                        <p>
+                            Est. time {task.estimatedTime}
+                        </p>
                     </li>)}
                 </ul>
             </section>
-        </>
+        </main>
     )
 }

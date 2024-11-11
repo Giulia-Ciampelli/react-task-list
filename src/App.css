@@ -18,3 +18,10 @@ header {
 }
 
 /* #endregion header */
+
+/* #region main */
+main {
+    padding: 1.5rem;
+}
+
+/* #endregion main */
