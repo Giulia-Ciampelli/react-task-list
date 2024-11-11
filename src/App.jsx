@@ -3,6 +3,7 @@ import { useState } from 'react'
 // #region componenti
 import Header from './components/Header'
 import Main from './components/Main'
+import Footer from './components/Footer'
 // #endregion componenti
 
 // #region stile
@@ -16,6 +17,7 @@ function App() {
     <>
       <Header />
       <Main />
+      <Footer />
     </>
   )
 }
