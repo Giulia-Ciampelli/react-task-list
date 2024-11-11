@@ -66,6 +66,7 @@ main {
 /* #region footer */
 footer {
     padding: 1.5rem;
+    background-color: lightblue;
 }
 
 /* #endregion footer */
