@@ -91,6 +91,8 @@ export default function Main() {
                 </ul>
             </section>
 
+            <hr />
+
             <section className="completed_tasks">
                 <h2>
                     Completed tasks ({completed_tasks.length})
