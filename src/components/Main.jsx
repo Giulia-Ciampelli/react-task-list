@@ -83,7 +83,7 @@ export default function Main() {
 
                 <ul>
                     {current_tasks.map((task, index) => <li key={index}>
-                        <span>
+                        <span className="title">
                             {task.title}
                         </span>
                         <span className="state">
@@ -92,7 +92,7 @@ export default function Main() {
                         <p>
                             Priority: {task.priority}
                         </p>
-                        <p>
+                        <p className="time">
                             Est. time {task.estimatedTime}
                         </p>
                     </li>)}
@@ -108,7 +108,7 @@ export default function Main() {
 
                 <ul>
                     {completed_tasks.map(task => <li key={task.id}>
-                        <span>
+                        <span className="title">
                             {task.title}
                         </span>
                         <span className="state">
